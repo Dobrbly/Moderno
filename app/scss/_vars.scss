@@ -2,9 +2,11 @@ $color-text: #546e7a;
 $bg  :#263238;
 $red: #e74c3c;
 $green: #8bc34a;
+$grey: #f4f6f5;
+$outline: #6e6f6e;
 
 @mixin f400{
-    font-family: 'Roboto-Medium', sans-serif;
+    font-family: 'Roboto-Regular', sans-serif;
     font-weight: 400;
 }
 @mixin f500{
@@ -12,6 +14,10 @@ $green: #8bc34a;
     font-weight: 500;
 }
 @mixin f700{
-    font-family: 'Roboto-Medium', sans-serif;
+    font-family: 'Roboto-Bold', sans-serif;
     font-weight: 700;
+}
+
+@mixin outline{
+    border: 1px solid $outline;
 }

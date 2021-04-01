@@ -89,7 +89,8 @@
     &-form {
         max-width: 670px;
         margin   : 0 auto;
-        position     : relative;
+        position : relative;
+
         input {
             display      : block;
             width        : 100%;
@@ -97,11 +98,12 @@
             border-radius: 4px;
             height       : 56px;
             border       : none;
-            padding-left: 25px;
+            padding-left : 25px;
             padding-right: 60px;
             font-size    : 14px;
             outline      : none;
-            box-sizing: border-box;
+            box-sizing   : border-box;
+
             &::placeholder {
                 color: #90a4ae;
             }
@@ -112,18 +114,181 @@
         }
 
         button {
-            position: absolute;
+            position        : absolute;
             background-color: transparent;
-            border: none;
-            top     : 16px;
-            right: 20px;
-            outline: none;
-            border-radius: 50%;
+            border          : none;
+            top             : 16px;
+            right           : 20px;
+            outline         : none;
+            border-radius   : 50%;
+
             &:focus {
-                border: 1px solid #6e6f6e;
+                @include outline;
             }
         }
     }
 }
 
 // end search 
+
+// start products
+
+.products {
+    background-color: $grey;
+    padding         : 110px 0;
+}
+
+// .products__inner{
+//     display: flex;
+//     justify-content: space-between;
+// }
+.products__inner-btn {
+    text-align   : center;
+    margin-bottom: 60px;
+
+    button {
+        font-size: 14px;
+        @include f500;
+        background-color: #fff;
+        padding         : 6px 20px;
+        border          : none;
+        cursor          : pointer;
+        color           : $bg;
+        outline         : none;
+
+        &:focus {
+            @include outline;
+        }
+
+        &+button {
+            margin-left: 5px;
+        }
+
+        &.mixitup-control-active {
+            background-color: $red;
+            color           : #fff;
+        }
+    }
+}
+
+.products__inner-box {
+    display        : flex;
+    justify-content: space-between;
+    flex-wrap      : wrap;
+}
+
+.products__item {
+    background-color: #fff;
+    max-width       : 440px;
+    margin-bottom   : 30px;
+
+    &-img {
+        min-height         : 250px;
+        display            : block;
+        background-position: center;
+        background-repeat  : no-repeat;
+        background-size    : cover;
+    }
+
+    &-content {
+        display        : flex;
+        justify-content: space-between;
+        padding        : 0 30px;
+        align-items    : center;
+        border-bottom  : 1px solid #e7ecf2;
+    }
+
+    &-name {
+        min-width : 320px;
+        min-height: 90px;
+    }
+
+    &-title {
+        font-size: 18px;
+        @include f500;
+        color  : $bg;
+        display: block;
+        padding: 20px 0 10px;
+    }
+
+    &-category {
+        color: $green;
+        @include f500;
+        display: block;
+    }
+
+    &-price {
+        font-size: 20px;
+        @include f700;
+        color: $bg;
+    }
+
+    &-info {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        padding        : 10px 30px;
+    }
+
+    &-author {
+        @include f500;
+        color      : $color-text;
+        display    : flex;
+        align-items: center;
+        outline    : none;
+        border     : 1px solid transparent;
+        max-width: 240px;
+
+        &:focus {
+            @include outline;
+        }
+
+        .avatar {
+            width              : 30px;
+            height             : 30px;
+            border-radius      : 50%;
+            background-size    : cover;
+            background-position: center;
+            background-repeat  : no-repeat;
+            margin-right       : 15px;
+        }
+    }
+
+    &-star {
+        display: flex;
+        align-items: center;
+        .rate__star{
+            margin-right: 13px;
+        }
+    }
+    &-btn {
+        text-align: center;
+        margin-top: 45px;
+
+        button {
+            text-align      : center;
+            font-size       : 16px;
+            padding         : 20px 30px;
+            box-shadow      : 0px 1px 3px 0px rgba(204, 216, 228, 0.75);
+            background-color: #fff;
+            border          : none;
+            margin          : 0 5px;
+            cursor          : pointer;
+            outline         : none;
+            border          : 1px solid transparent;
+
+            &.mixitup-control-active {
+                background-color: $red;
+                color           : #fff;
+            }
+
+            &:focus {
+                @include outline;
+            }
+        }
+    }
+}
+
+
+// end products
+
