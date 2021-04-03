@@ -358,7 +358,7 @@
                 background-color: $green;
 
                 path {
-                    fill: #fff;
+                    fill      : #fff;
                     transition: all 1s;
                 }
             }
@@ -414,3 +414,49 @@
 }
 
 // end choice
+
+// start author
+
+.author {
+    display            : flex;
+    justify-content    : center;
+    align-items        : center;
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    background-position: center;
+    min-height         : 760px;
+    margin: 3px 0;
+
+    &__box {
+        max-width       : 650px;
+        width           : 100%;
+        background-color: $green;
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        color           : #fff;
+        min-height      : 215px;
+    }
+
+    &__title {
+        width      : 270px;
+        font-size  : 30px;
+        line-height: 36px;
+
+        span {
+            @include f700;
+            font-size: 30px;
+            line-height: 36px;
+        }
+    }
+    &__link{
+        font-size: 18px;
+        line-height: 36px;
+        color: $bg;
+        background-color: #fff;
+        padding: 14px 40px;
+        margin-left: 45px;
+    }
+}
+
+// end author
