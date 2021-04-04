@@ -1,4 +1,4 @@
-*html {
+html {
     box-sizing: border-box;
 }
 
@@ -45,12 +45,17 @@ body {
     }
 }
 
-.title{
-    font-size: 36px;
+.title {
+    font-size  : 36px;
     line-height: 60px;
     @include f700;
     margin-bottom: 30px;
-    text-align: center;
-    color: $bg;
+    text-align   : center;
+    color        : $bg;
 
+}
+
+form,
+input {
+    box-sizing: border-box;
 }
