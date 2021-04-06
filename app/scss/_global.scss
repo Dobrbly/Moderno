@@ -7,6 +7,27 @@ html {
     box-sizing: inherit;
 }
 
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    display       : flex;
+    flex-direction: column;
+    min-height    : 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+.content__page{
+    background-color: $grey;
+}
 a {
     display        : inline-block;
     text-decoration: none;
@@ -59,3 +80,44 @@ form,
 input {
     box-sizing: border-box;
 }
+
+// start breadcrumbs
+.breadcrumbs {
+    &__inner {
+        padding: 45px 0 40px;
+
+        &-list {
+            li {
+                display : inline-block;
+                position: relative;
+
+                &:last-child {
+
+                    a,
+                    span {
+                        color: $bg;
+                    }
+                }
+
+                &+li {
+                    padding-left: 20px;
+
+                    &::before {
+                        content : '-';
+                        position: absolute;
+                        color   : $green;
+                        left    : 6px;
+                    }
+                }
+
+                a,
+                span {
+                    font-size: 15px;
+                    color    : #b0bec5;
+                }
+            }
+        }
+    }
+}
+
+// end breadcrumbs
