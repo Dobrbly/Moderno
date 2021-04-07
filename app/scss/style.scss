@@ -215,7 +215,8 @@
     }
 
     &-name {
-        min-width : 320px;
+        max-width : 320px;
+        width     : 100%;
         min-height: 90px;
     }
 
@@ -237,6 +238,10 @@
         font-size: 20px;
         @include f700;
         color: $bg;
+
+        span {
+            display: none;
+        }
     }
 
     &-info {
@@ -760,12 +765,15 @@
 
     .products__item-name,
     .products__item-content {
-        min-width: 175px;
+        max-width: 175px;
+        width    : 100%;
     }
 
     .products__item-star .rate__star {
         margin: 0;
     }
+
+
 
     .products__item-none {
         display: none;
@@ -987,7 +995,8 @@
     flex-wrap      : wrap;
 
     .products__item {
-        min-width: 270px;
+        max-width: 270px;
+        width    : 100%;
         color    : #b0bec5;
     }
 
@@ -997,10 +1006,15 @@
 
     .products__item-content {
         padding: 0 20px;
+
+    }
+
+    .products__item-text {
+        display: none;
     }
 
     .products__item-name {
-        min-width: 175px;
+        max-width: 175px;
         width    : 100%;
     }
 
@@ -1028,6 +1042,11 @@
     .products__item-author .avatar {
         margin-right: 10px;
     }
+
+    .products__item-comments,
+    .products__item-like {
+        display: none;
+    }
 }
 
 .pagination {
@@ -1037,39 +1056,104 @@
 
         font-size: 16px;
 
-        // & .active {
+        li {
+            display: inline-block;
 
-        //     a {
-        //         background-color: $red;
-        //         color           : #fff;
-        //     }
+            li+li {
+                margin-left: 6px;
+            }
+        }
 
-        // }
+        a,
+        span {
+            display         : flex;
+            align-items     : center;
+            justify-content : center;
+            background-color: #fff;
+            width           : 43px;
+            height          : 38px;
+            box-shadow      : 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+
+            &.active {
+                background-color: $red;
+                color           : #fff;
+            }
+        }
     }
+}
 
-    li {
-        display: inline-block;
+.products__item {
+    &.list {
+        max-width: 100%;
 
-        li+li {
-            margin-left: 6px;
+        .products__item-img {
+            width: 240px;
+            float: left;
+        }
+
+        .products__item-content {
+            padding: 0 30px;
+        }
+
+        .products__item-name {
+            max-width: 520px;
+        }
+
+        .products__item-title {
+            padding: 25px 0 10px;
+        }
+
+        .products__item-text {
+            display: block;
+            padding: 20px 0;
+        }
+
+        .products__item-price {
+            font-size: 30px;
+            @include f700;
+
+            span {
+                display    : block;
+                font-size  : 13px;
+                color      : #aeb4bb;
+                padding-top: 35px;
+            }
+        }
+
+        .products__item-info {
+            padding: 15px 25px;
+        }
+
+        .products__item-comments,
+        .products__item-like {
+            position    : relative;
+            display     : block;
+            padding-left: 50px;
+            border-left : 1px solid #aeb4bb;
+            margin-left : 25px;
+        }
+
+        .products__item-comments::before {
+            content:'\f0e5';
+            position: absolute;
+            left: 17px;
+            top: -3px;
+            font-family: 'icomoon';
+            color: $green;
+            font-size: 16px;
+        }
+
+        .products__item-like::before {
+            content:'\f08a';
+            position: absolute;
+            left: 17px;
+            top: -3px;
+            font-family: 'icomoon';
+            color: $green;
+            font-size: 16px;
         }
     }
 
-    a,
-    span {
-        display         : flex;
-        align-items     : center;
-        justify-content : center;
-        background-color: #fff;
-        width           : 43px;
-        height          : 38px;
-        box-shadow      : 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
-
-        &.active {
-            background-color: $red;
-            color           : #fff;
-        }
-    }
 }
 
 // end product__page
