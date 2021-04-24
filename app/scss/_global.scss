@@ -1,4 +1,4 @@
-html {
+* {
     box-sizing: border-box;
 }
 
@@ -83,6 +83,7 @@ input {
 
 // start breadcrumbs
 .breadcrumbs {
+    background-color: $bg-page;
     &__inner {
         padding: 45px 0 40px;
 
