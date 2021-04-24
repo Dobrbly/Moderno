@@ -37,6 +37,24 @@
 }
 
 @font-face {
+    font-family: 'Open Sans-ExtraBold', sans-serif;
+    src: url('../fonts/OpenSans-ExtraBold.woff2') format('woff2'),
+        url('../fonts/OpenSans-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans-Regular', sans-serif;
+    src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+        url('../fonts/OpenSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+}
+
+
+
+@font-face {
   font-family: 'icomoon';
   src        : url('../fonts/icomoon.eot?f7mczg');
   src        : url('../fonts/icomoon.eot?f7mczg#iefix') format('embedded-opentype'),
