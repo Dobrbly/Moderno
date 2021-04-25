@@ -1990,13 +1990,8 @@
     background-color: $bg-page;
     padding-bottom  : 150px;
 
-    &__opacity {
-        background-color: rgba(149, 149, 149, 0.514);
-    }
-
     &__inner {
         border: 1px solid $border;
-
     }
 
     &__title {
@@ -2056,3 +2051,46 @@
 }
 
 // end 404
+
+
+// start about
+
+.about-page {
+    background-color: $bg-page;
+    padding-bottom  : 140px;
+
+    &__inner {
+        border: 1px solid $border;
+    }
+
+    &__title {
+        font-size: 24px;
+        @include f500;
+        color           : $bg;
+        background-color: #fff;
+        padding         : 30px 20px;
+        border-bottom   : 1px solid $border;
+    }
+
+    &__content {
+        background-color: #fff;
+        padding         : 24px 58px 26px 50px;
+        color: $light-grey;
+
+        &-title {
+            font-size: 20px;
+            color    : #444;
+            @include f700;
+            line-height: 24px;
+        }
+
+        &-text {
+            padding-bottom: 24px;
+            margin-bottom: 0;
+            font-size: 15px;
+            line-height: 24px;
+        }
+    }
+}
+
+// end about
