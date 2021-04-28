@@ -30,7 +30,9 @@ $light-grey: #707070;
 @mixin outline{
     border: 1px solid $outline;
 }
-
+@mixin border{
+    border: 1px solid $border;
+}
 
 @mixin img{
     background-repeat: no-repeat;

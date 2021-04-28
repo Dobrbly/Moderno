@@ -37,10 +37,10 @@ $(function () {
   });
 
   $('.tab-item').not(':first').hide();
-  $('.details-page__tabs .tab').on('click', function(event) {
+  $('.details-page__tabs .tab, .settings__tab .tab').on('click', function(event) {
   var id = $(this).attr('data-id');
-	  $('.details-page__tabs').find('.tab-item').removeClass('active-tab').hide();
-  	$('.details-page__tabs .tabs').find('.tab').removeClass('active');
+	  $('.details-page__tabs, .settings__tab').find('.tab-item').removeClass('active-tab').hide();
+  	$('.details-page__tabs .tabs, .settings__tab .tabs').find('.tab').removeClass('active');
   	$(this).addClass('active');
   	$('#'+id).addClass('active-tab').fadeIn();
   	return false;
